@@ -1,0 +1,93 @@
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <title>Employee Directory</title>
+	    <meta name="description" content="">
+	    <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+	    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	    <link rel="stylesheet" href="css/normalize.css">
+	    <link rel="stylesheet" href="css/main.css">
+	    <script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-9880547-4']);
+		  _gaq.push(['_setDomainName', 'corecon.org']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</head>
+<body>
+	<header>
+		<h1>Find a Conference Room</h1>
+	</header>
+	<div class="wrapper">
+			<article>
+				<section>
+					<form id="searchForm" role="form" action="/;jsessionid=61B10B6F9C08053BE8BC9B7447D2DFD5" method="post">
+						<ul>
+							<li>
+								<label for="Buildings">
+									<select id="Buildings" name="buildings">
+										<option value="Any Location">Any Location</option>
+										<option value="Raleigh Municipal Building">Raleigh Municipal Building</option>
+										<option value="One Exchnage Plaza">One Exchnage Plaza</option>
+								</select>
+								</label>
+							</li>
+							<li>
+								<label for="DateTime">
+									<input id="DateTime" type="datetime-local">
+								</label>
+							</li>
+							<li>
+								<label for="Attendees">
+									<input id="Attendees" type="number" placeholder="# of people">
+								</label>
+							</li>
+							<li>
+								<h4>Amenities</h4>
+								<input id="a1" type="checkbox">
+								<label for="a1">Amenity #1 <span class="ui"></span></label>
+								<input id="a2" type="checkbox">
+								<label for="a2">Amenity #2 <span class="ui"></span></label>
+								<input id="a3" type="checkbox">
+								<label for="a3">Amenity #3 <span class="ui"></span></label>
+								<input id="a4" type="checkbox">
+								<label for="a4">Amenity #4 <span class="ui"></span></label>
+							<li id="ErrorMessage">
+							</li>
+							<li>
+								<label for="Search">
+									<input type="submit" id="Search" value="Search" class="button" />
+								</label>
+							</li>
+						</ul>
+					</form>
+					<h2>Results []</h2>
+					<hr/>
+				</section>
+				
+				
+				
+			</article>
+		</div>
+		<footer>
+			<p><a href="http://corecon.org" target="_blank">corecon</a> | <a href="http://www.raleighnc.gov" target="_blank">raleighnc.gov</a></p>
+		</footer>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="resources/js/more.js"></script>
+</body>
+</html>
