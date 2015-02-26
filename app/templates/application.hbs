@@ -8,15 +8,11 @@
                     <ul>
                         <li>
                             <label for="Buildings">
-{{!--                                 <select id="Buildings" name="buildings">
-                                    <option value="Any Location">Any Location</option>
-                                    <option value="Raleigh Municipal Building">Raleigh Municipal Building</option>
-                                    <option value="One Exchnage Plaza">One Exchnage Plaza</option>
-                                </select> --}}
                                 {{view "select"
                                     content=buildings
                                     optionValuePath="content.id"
-                                    optionLabelPath="content.name"}}
+                                    optionLabelPath="content.name"
+                                    prompt="None"}}
                             </label>
                         </li>
                         <li>
@@ -39,8 +35,6 @@
                             <label for="a3">Amenity #3 <span class="ui"></span></label>
                             <input id="a4" type="checkbox">
                             <label for="a4">Amenity #4 <span class="ui"></span></label>
-                        <li id="ErrorMessage">
-                        </li>
                         <li>
                             <label for="Search">
                                 <input type="submit" id="Search" value="Search" class="button" />
@@ -48,8 +42,6 @@
                         </li>
                     </ul>
                 </form>
-                <h2>Results []</h2>
-                <hr/>
                 {{outlet}}
             </section>
         </article>
