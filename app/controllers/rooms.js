@@ -19,7 +19,7 @@ export default Ember.ArrayController.extend({
 
             .filter(function(item) {
                 if (this !== null) {
-                    return item.get('capacity') === this  ;                  
+                    return item.get('capacity') >= this;                  
                 } else {
                     return true;
                 }
