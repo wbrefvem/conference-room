@@ -2,47 +2,5 @@
     <h1>Find a Conference Room</h1>
 </header>
 <div class="wrapper">
-        <article>
-            <section>
-                <form id="searchForm" role="form" action="/;jsessionid=61B10B6F9C08053BE8BC9B7447D2DFD5" method="post">
-                    <ul>
-                        <li>
-                            <label for="Buildings">
-                                {{view "select"
-                                    content=buildings
-                                    optionValuePath="content.id"
-                                    optionLabelPath="content.name"
-                                    prompt="None"}}
-                            </label>
-                        </li>
-                        <li>
-                            <label for="DateTime">
-                                <input id="DateTime" type="datetime-local">
-                            </label>
-                        </li>
-                        <li>
-                            <label for="Attendees">
-                                <input id="Attendees" type="number" placeholder="# of people">
-                            </label>
-                        </li>
-                        <li>
-                            <h4>Amenities</h4>
-                            <input id="a1" type="checkbox">
-                            <label for="a1">Amenity #1 <span class="ui"></span></label>
-                            <input id="a2" type="checkbox">
-                            <label for="a2">Amenity #2 <span class="ui"></span></label>
-                            <input id="a3" type="checkbox">
-                            <label for="a3">Amenity #3 <span class="ui"></span></label>
-                            <input id="a4" type="checkbox">
-                            <label for="a4">Amenity #4 <span class="ui"></span></label>
-                        <li>
-                            <label for="Search">
-                                <input type="submit" id="Search" value="Search" class="button" />
-                            </label>
-                        </li>
-                    </ul>
-                </form>
-                {{outlet}}
-            </section>
-        </article>
-    </div>
+    {{outlet}}
+</div>
