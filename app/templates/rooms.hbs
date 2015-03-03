@@ -1,7 +1,51 @@
-<h2>Results [{{controller.count}}]</h2>
-<hr/>
-<ul>
-    {{#each model}}
-        <li>{{room}}, {{building.name}}, {{capacity}}</li>
-    {{/each}}
-</ul>
+<article>
+    <section>
+        <form id="searchForm" role="form" action="/;jsessionid=61B10B6F9C08053BE8BC9B7447D2DFD5" method="post">
+            <ul>
+                <li>
+                    <label for="Buildings">
+                        {{view "select"
+                            content=buildings
+                            optionValuePath="content.id"
+                            optionLabelPath="content.name"
+                            selection=selectedBuilding
+                            prompt="All"}}
+                    </label>
+                </li>
+                <li>
+                    <label for="DateTime">
+                        <input id="DateTime" type="datetime-local">
+                    </label>
+                </li>
+                <li>
+                    <label for="Attendees">
+                        {{input type="number" placeholder="# of people" value=capacity}}
+                    </label>
+                </li>
+                <li>
+                    <h4>Amenities</h4>
+                    {{input type="checkbox" name="projector" checked=projector viewName="projector"}}
+                    <label {{bind-attr for="view.projector.elementId"}}>Projector  <span class="ui"></span></label>
+                    {{input type="checkbox" name="conferencephone" checked=conferencephone viewName="conferencephone"}}
+                    <label {{bind-attr for="view.conferencephone.elementId"}}>Conference Phone  <span class="ui"></span></label>
+                    <input id="a3" type="checkbox">
+                    <label for="a3">Amenity #3 <span class="ui"></span></label>
+                    <input id="a4" type="checkbox">
+                    <label for="a4">Amenity #4 <span class="ui"></span></label>
+                <li>
+                    <label for="Search">
+                        <input type="submit" id="Search" value="Search" class="button" />
+                    </label>
+                </li>
+            </ul>
+        </form>
+        <h2>Results [{{filteredRooms.length}}]</h2>
+        <hr/>
+        (Room, Building, Capacity, Has Usage Restrictions)
+        <ul>
+            {{#each room in filteredRooms}}
+                <li>{{room.name}}, {{room.building.name}}, {{room.capacity}}, {{room.hasUsageRestrictions}}</li>
+            {{/each}}
+        </ul>
+    </section>
+</article>
