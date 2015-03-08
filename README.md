@@ -5,7 +5,7 @@
 This app uses the [Sane Stack](http://www.sanestack.com), which consists of a loosely frontend, [Ember.js](http://emberjs.com),
 and backend, [Sails.js](http://sailsjs.org). Each is a separate [Node.js](http://nodejs.org) web app. 
 
-## Installation
+## Installation & Usage
 
 * Install sails and sane-cli.  
 
@@ -35,6 +35,7 @@ and backend, [Sails.js](http://sailsjs.org). Each is a separate [Node.js](http:/
     ```  
 
     You'll see some startup messages, followed by a prompt:  
+
     ```
     sails>
     ```
@@ -46,7 +47,12 @@ and backend, [Sails.js](http://sailsjs.org). Each is a separate [Node.js](http:/
     loadFixtures();
     ```  
 
-## Usage
+* Run server.  
+
+    From the top-level directory, run: 
+    ```
+    sane up
+    ```
 
 The backend is available at http://localhost:1337 and the Ember frontend, with livereload enabled, is available
 at http://localhost:4200. Enjoy!
