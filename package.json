@@ -1,7 +1,7 @@
 {
-  "name": "sane-test-project",
+  "name": "conference-room",
   "version": "0.0.1",
-  "description": "A blank sane stack project.",
+  "description": "A gluten-free conference room app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
