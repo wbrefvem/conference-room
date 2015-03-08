@@ -19,6 +19,13 @@ and backend, [Sails.js](http://sailsjs.org). Each is a separate [Node.js](http:/
     git clone https://github.com/wbrefvem/conference-room.git
     ```
 
+* Install dependencies.  
+
+    ```
+    cd conference-room && npm install
+    cd client && npm install && bower install
+    cd ../server && npm install
+
 * Load fixtures.  
 
     ```
