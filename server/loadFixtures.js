@@ -1,25 +1,25 @@
+"use strict";
+
 var fs = require('fs');
 
 module.exports = function() {
+
+    function createModel(model, items) {
+        model.create(items).exec(function(err, data) {
+            if (err) throw err;
+            sails.log(data);
+        });
+    }
+
     fs.readFile('./fixtures.json', {'encoding': 'utf-8'}, function(err, data) {
         if (err) throw err;
 
-        fixtures = JSON.parse(data);
-        buildings = fixtures[0].items;
-        rooms = fixtures[1].items;
+        var fixtures = JSON.parse(data);
 
-        for (var i = 0; i < buildings.length; i++) {
-            Building.create(buildings[i]).exec(function(err, data) {
-                if (err) throw err;
-                console.log(data);
-            });
-        }
-
-        for (var i = 0; i < rooms.length; i++) {
-            Room.create(rooms[i]).exec(function(err, data) {
-                if (err) throw err;
-                console.log(data);
-            });
+        for (var fixture of fixtures) {
+            var model = sails.models[fixture.model];
+            var items = fixture.items;
+            createModel(model, items);
         }
     });
-}
+};
