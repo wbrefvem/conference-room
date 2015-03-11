@@ -26,5 +26,9 @@
     "url": "git://github.com/refvemw/server.git"
   },
   "author": "refvemw",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "lodash": "^3.5.0"
+  }
 }
