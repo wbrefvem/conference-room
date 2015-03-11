@@ -4,12 +4,14 @@
       <ul>
         <li>
           <label for="Buildings">
+            <div class="custom">
             {{view "select"
               content=buildings
               optionValuePath="content.id"
               optionLabelPath="content.name"
               selection=selectedBuilding
               prompt="Any building"}}
+            </div>
           </label>
         </li>
         <li class="hidden">
@@ -17,21 +19,26 @@
             <input id="DateTime" type="datetime-local">
           </label>
         </li>
-        <li>
+        <li class="hidden">
           <label for="Attendees">
             {{input type="number" placeholder="# of people" value=capacity}}
           </label>
         </li>
         <li>
-          <h4>Amenities</h4>
-          <div>
+          {{input type="checkbox" name="capacity" checked=5 viewName="capacity"}}
+          <label {{bind-attr for="view.capacity.elementId"}}>5 <span class="icon-person"></span></label>
+          {{input type="checkbox" name="capacity" checked=10 viewName="capacity"}}
+          <label {{bind-attr for="view.capacity.elementId"}}>10 <span class="icon-person"></span></label>
+          {{input type="checkbox" name="capacity" checked=15 viewName="capacity"}}
+          <label {{bind-attr for="view.capacity.elementId"}}>15 <span class="icon-person"></span></label>
+        </li>
+        <li>
           {{input type="checkbox" name="projector" checked=projector viewName="projector"}}
-          <label {{bind-attr for="view.projector.elementId"}}>Projector<span class="ui"></span></label>
-          </div>
-          <div>
+          <label {{bind-attr for="view.projector.elementId"}}><span class="icon-projector"></span> Projector</label>
+        </li>
+        <li>
           {{input type="checkbox" name="conferencePhone" checked=conferencePhone viewName="conferencePhone"}}
-          <label {{bind-attr for="view.conferencePhone.elementId"}}>Conference Phone<span class="ui"></span></label>
-          </div>
+          <label {{bind-attr for="view.conferencePhone.elementId"}}><span class="icon-phone"></span> Conference Phone</label>
         </li>
         <li class="hidden">
           <label for="Search">
@@ -44,11 +51,28 @@
   <section class="results">
     <h2>{{filteredRooms.length}} Rooms available</h2>
     <hr/>
-    (Room, Building, Capacity, Has Usage Restrictions)
     <ul>
-        {{#each room in filteredRooms}}
-            <li>{{room.name}}, {{room.building.name}}, {{room.capacity}}, {{room.hasUsageRestrictions}}</li>                
-        {{/each}}
+    {{#each room in filteredRooms}}
+      <li>
+        {{room.building.name}}
+        <h3>{{room.name}}</h3>
+        {{#if room.projector}}
+          <span class="icon-projector"></span>
+        {{/if}}
+        {{#if room.conferencePhone}}
+          <span class="icon-phone"></span>
+        {{/if}}
+        {{room.capacity}} <span class="icon-person"></span>
+        {{#if room.hasUsageRestrictions}}
+          {{#if room.generalUsage}}
+          <br/>
+          <span class="icon-warning"></span> {{room.manager}}
+          {{/if}}
+        {{/if}}
+        <br/>
+        <em>{{room.equipment}}</em>
+      </li>
+    {{/each}}
     </ul>
   </section>
 </article>
