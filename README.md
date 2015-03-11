@@ -1,4 +1,4 @@
-# Conference Room
+# Conference Room  [![Build Status](https://travis-ci.org/wbrefvem/conference-room.svg?branch=master)](https://travis-ci.org/wbrefvem/conference-room)
 
 ## App Structure
 
