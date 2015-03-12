@@ -4,7 +4,7 @@
   "description": "A gluten-free conference room app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"TODO: write tests!\" && exit 0"
+    "test": "cd client && npm test"
   },
   "author": "",
   "license": "MIT",
