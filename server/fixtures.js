@@ -4,42 +4,49 @@ var fs = require('fs');
 var Sails = require('sails');
 var async = require('async');
 
+String.prototype.capitalizeFirstLetter = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
 Sails.load({ port: 8008, debug: 'info' }, _sailsDidLoad);
 
-function _modelIterator(fixture, next) {
+function createObjects(fixture, next) {
     var model = Sails.models[fixture.model];
     var items = fixture.items;
 
-    async.each(items, _instanceIterator, _iteratorFinish);
+    Sails.log.info('Destroying existing objects...');
 
-    model.create(items).exec(function(err, data) {
-        if (err) next(err);
-        Sails.log.info(data);
-        next();
-    });  
+    model.destroy().exec(function (err, data) {
+        if (err) throw err;
+
+        Sails.log.info(data.length + ' objects of type ' + fixture.model.capitalizeFirstLetter() + ' destroyed.');
+        Sails.log.info('Creating new objects from fixtures...');
+
+        model.create(items).exec(function(err, data) {
+            if (err) next(err);
+            Sails.log.info(data.length + ' new objects of type ' + fixture.model.capitalizeFirstLetter() + ' created');
+            next();
+        });
+    });
 }
 
-function _instanceIterator(instance, next) {
-
-}
-
-function _iteratorFinish(err) {
+function exit(err) {
     if (err) throw err;
     process.exit();
 }
 
-function _reader(err, data) {
+function parseFile(err, data) {
     if (err) throw err;
-    console.dir(Sails);
-    Sails.log.info('file read...');
+    Sails.log.info('Fixtures file read successfully...');
+    Sails.log.info('Parsing fixtures file...');
     
     var fixtures = JSON.parse(data);
 
-    async.each(fixtures, _modelIterator, _iteratorFinish);
+    async.each(fixtures, createObjects, exit);
 }
 
 function _sailsDidLoad(err, sails) {
     if (err) throw err;
 
-    fs.readFile('./fixtures.json', {'encoding': 'utf-8'}, _reader);   
+    fs.readFile('./fixtures.json', {'encoding': 'utf-8'}, parseFile);   
 }
