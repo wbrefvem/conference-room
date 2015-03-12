@@ -4,4 +4,4 @@ node_js:
 install:
     - npm install
     - cd client && npm install
-    - cd ../server && npm install
+    - cd ../server && npm install && cd ..
