@@ -42,7 +42,6 @@ export default Ember.ArrayController.extend({
             }, this.projector);
     }.property('selectedBuilding', 'capacity', 'conferencePhone', 'projector'),
 
-
     buildings: function() {
         return this.store.find('building');
     }.property('buildings'),
