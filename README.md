@@ -2,7 +2,7 @@
 
 ## App Structure
 
-This app uses the [Sane Stack](http://www.sanestack.com), which consists of a loosely copuled frontend, [Ember.js](http://emberjs.com),
+This app uses the [Sane Stack](http://www.sanestack.com), which consists of a loosely coupled frontend, [Ember.js](http://emberjs.com),
 and backend, [Sails.js](http://sailsjs.org). Each is a separate [Node.js](http://nodejs.org) web app. 
 
 ## Installation & Usage
