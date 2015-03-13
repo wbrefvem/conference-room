@@ -29,23 +29,10 @@ and backend, [Sails.js](http://sailsjs.org). Each is a separate [Node.js](http:/
 
 * Load fixtures.  
 
+    Assuming you're still in conference-room/server, run the script:
     ```
-    cd conference-room/server
-    sails console
-    ```  
-
-    You'll see some startup messages, followed by a prompt:  
-
+    node fixtures.js
     ```
-    sails>
-    ```
-
-    Type the following commands in at the ```sails>``` prompt:  
-
-    ```  
-    var loadFixtures = require('./loadFixtures.js');
-    loadFixtures();
-    ```  
 
 * Run server.  
 
