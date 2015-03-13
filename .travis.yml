@@ -3,5 +3,6 @@ node_js:
     - "0.12"
 install:
     - npm install
-    - cd client && npm install
-    - cd ../server && npm install && cd ..
+    - cd client && npm install && bower install
+    - cd ../server && npm install
+    - cd ..
