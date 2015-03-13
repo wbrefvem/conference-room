@@ -5,13 +5,15 @@
 This app uses the [Sane Stack](http://www.sanestack.com), which consists of a loosely coupled frontend, [Ember.js](http://emberjs.com),
 and backend, [Sails.js](http://sailsjs.org). Each is a separate [Node.js](http://nodejs.org) web app. 
 
+## Prerequisites
+
+* [Node](https://nodejs.org/)
+* [Bower](http://bower.io)
+* [Sails](http://sailsjs.org)
+* [Ember CLI](http://www.emeber-cli.com)
+* [Sane CLI](http://sanestack.com)
+
 ## Installation & Usage
-
-* Install sails and sane-cli.  
-
-    ```
-    npm install -g sails sane-cli 
-    ```
 
 * Clone this repo.  
     
