@@ -7,11 +7,16 @@ and backend, [Sails.js](http://sailsjs.org). Each is a separate [Node.js](http:/
 
 ## Prerequisites
 
-* [Node](https://nodejs.org/)
+These packages all require [Node.js](http://nodejs.org), installation for which varies by platform.
+
 * [Bower](http://bower.io)
 * [Sails](http://sailsjs.org)
 * [Ember CLI](http://www.emeber-cli.com)
 * [Sane CLI](http://sanestack.com)
+
+```
+npm install -g bower sails ember-cli sane-cli
+```
 
 ## Installation & Usage
 
