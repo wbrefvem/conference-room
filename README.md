@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/wbrefvem/conference-room.png?label=ready&title=Ready)](https://waffle.io/wbrefvem/conference-room)
 # Conference Room  [![Build Status](https://travis-ci.org/wbrefvem/conference-room.svg?branch=master)](https://travis-ci.org/wbrefvem/conference-room) [![Davis Dependency status](https://david-dm.org/wbrefvem/conference-room.svg)](https://david-dm.org/wbrefvem/conference-room.svg) 
 
 ## App Structure
