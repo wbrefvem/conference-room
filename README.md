@@ -1,5 +1,6 @@
 # Conference Room  
-###[![Build Status](https://travis-ci.org/wbrefvem/conference-room.svg?branch=master)](https://travis-ci.org/wbrefvem/conference-room) [![Davis Dependency status](https://david-dm.org/wbrefvem/conference-room.svg)](https://david-dm.org/wbrefvem/conference-room.svg) [![Stories in Ready](https://badge.waffle.io/wbrefvem/conference-room.png?label=ready&title=Ready)](https://waffle.io/wbrefvem/conference-room) [![Stories in Ready](https://badge.waffle.io/wbrefvem/conference-room.svg?label=in progress&title=In Progress)](http://waffle.io/wbrefvem/conference-room) [![Code Climate](https://codeclimate.com/github/wbrefvem/conference-room/badges/gpa.svg)](https://codeclimate.com/github/wbrefvem/conference-room)
+##Performance Indicators
+[![Build Status](https://travis-ci.org/wbrefvem/conference-room.svg?branch=master)](https://travis-ci.org/wbrefvem/conference-room) [![Davis Dependency status](https://david-dm.org/wbrefvem/conference-room.svg)](https://david-dm.org/wbrefvem/conference-room.svg) [![Stories in Ready](https://badge.waffle.io/wbrefvem/conference-room.png?label=ready&title=Ready)](https://waffle.io/wbrefvem/conference-room) [![Stories in Ready](https://badge.waffle.io/wbrefvem/conference-room.svg?label=in progress&title=In Progress)](http://waffle.io/wbrefvem/conference-room) [![Code Climate](https://codeclimate.com/github/wbrefvem/conference-room/badges/gpa.svg)](https://codeclimate.com/github/wbrefvem/conference-room)
 
 ## App Structure
 
