@@ -1,11 +1,14 @@
 language: node_js
 node_js:
-    - "0.12"
-    - "0.10"
+- '0.12'
+- '0.10'
 before_install:
-    - npm install -g bower
+- npm install -g bower
 install:
-    - npm install
-    - cd client && npm install && bower install
-    - cd ../server && npm install
-    - cd ..
+- npm install
+- cd client && npm install && bower install
+- cd ../server && npm install
+- cd ..
+notifications:
+  slack:
+    secure: WvmTciVYLZbfldSMCa7X2NXV/uoZimyjs3CrmPHx6XUcFI+D9YQXt1+5KSimxQz7XL18TdJFsURnn6qOFPFUxFKJ7GbSGiB8ktrnShajy96ZZoX/Zv98UCkP7WCjE+c6NcW5FQkI7/tqHLkob83096vayS66EefnVLQxRtgcOPc=
