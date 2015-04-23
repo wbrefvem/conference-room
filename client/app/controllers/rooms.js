@@ -60,7 +60,7 @@ export default Ember.ArrayController.extend({
     rooms.forEach(function(item, index, enumerable) {
       var id = item.get('building').get('id');
       if (buildingIds.indexOf(id) < 0) {
-        buildingIds.push(id)
+        buildingIds.push(id);
         buildingArray.push({ id: item.get('building').get('id'), name: item.get('building').get('name') });
       }
     });
