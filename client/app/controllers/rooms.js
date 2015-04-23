@@ -57,7 +57,7 @@ export default Ember.ArrayController.extend({
     var buildingIds = [];
     var buildingArray = [];
 
-    rooms.forEach(function(item, index, enumerable) {
+    rooms.forEach(function(item) {
       var id = item.get('building').get('id');
       if (buildingIds.indexOf(id) < 0) {
         buildingIds.push(id);
@@ -69,7 +69,7 @@ export default Ember.ArrayController.extend({
     var packaged = Ember.ArrayProxy.create({ content: [] });
 
 
-    function buildingIteratorCallback(item, index, enumerable) {
+    function buildingIteratorCallback(item) {
 
       var newObject = {
         id: item.id,
