@@ -49,11 +49,11 @@
     </form>
   </section>
   <section class="results">
-    <h2>{{filteredRooms.length}} Rooms available</h2>
+    <h2>{{filteredRooms.length}} Horses available</h2>
     <hr/>
     <ul>
     {{#each building in packagedRooms}}
-      <h2>{{building.name}}</h2>
+      <li><h2>{{building.name}}</h2></li>
       {{#each room in building.rooms}}
         <li>
           <h3>{{room.name}}</h3>
