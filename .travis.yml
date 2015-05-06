@@ -7,7 +7,7 @@ before_install:
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 400 ~/.ssh/id_rsa
 - npm config set spin false
-#- npm install -g bower
+- npm install -g bower
 - npm install -g mocha
 install:
 - npm install
