@@ -71,6 +71,10 @@ h3 {
 h1, h2, h3 {
     margin:0;
 }
+h4 {
+  background:#657838;
+  padding:0.25em;
+}
 .filters {
     position:fixed;
     right:0;
@@ -81,6 +85,9 @@ h1, h2, h3 {
 }
 .filters select {
     color:#515151;
+}
+.filters label {
+  cursor:pointer;
 }
 .results {
     /*width:75%;*/
