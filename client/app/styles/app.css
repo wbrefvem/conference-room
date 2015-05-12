@@ -52,17 +52,16 @@ header {
     -webkit-box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
     box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
 }
-h1{
+h1 {
     font-size: 2em;
     font-weight:normal;
     color:#fff;
     text-shadow: 2px 8px 6px rgba(0,0,0,0.2);
 }
-h2{
+h2 {
     font-size:2em;
     font-weight:normal;
-    display: inline;
-    float:left;
+    text-align:center;
     vertical-align: middle;
     text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
 }
@@ -90,7 +89,9 @@ h1, h2, h3 {
 .results li {
     padding:1em 0;
 }
-
+.results [class^="icon-"], .results [class*=" icon-"] {
+  font-size:2em;
+}
 
 
 .review .rating {
