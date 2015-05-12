@@ -22,6 +22,7 @@ cache:
   - ~/conference-room/client/bower_components
 after_success:
 - ssh refvemw@0.tcp.ngrok.io -o StrictHostKeyChecking=no -p 43793 'cd /u01/conference-room && git pull'
+
 notifications:
   slack:
-    secure: WvmTciVYLZbfldSMCa7X2NXV/uoZimyjs3CrmPHx6XUcFI+D9YQXt1+5KSimxQz7XL18TdJFsURnn6qOFPFUxFKJ7GbSGiB8ktrnShajy96ZZoX/Zv98UCkP7WCjE+c6NcW5FQkI7/tqHLkob83096vayS66EefnVLQxRtgcOPc=
+    secure: di870+2Ue/U5CZud2UOG7k/yByYi5q9G7UOQneJFy+tq4SncXLexJn9yqw9VpgZ6H/8dFEJ/49HgFY0/Ntx+5WaBO3sGNWen+uPBPY2NVmN6Pfsox3lUJRy53jtFjQk9aHBIJVew6Fh6IUoWLP/Dk1MjDQqAVH0KSBL5lQLequY=
