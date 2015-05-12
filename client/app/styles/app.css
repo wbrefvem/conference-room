@@ -81,15 +81,16 @@ h4 {
   color: #fff;
 }
 .filters {
-    position:fixed;
-    right:0;
-    /*float: right;
-    width:25%;*/
-    background: #657838;
-    color:#fff;
+  position:fixed;
+  right:0;
+  /*float: right;
+  width:25%;*/
+  background: #657838;
+  color:#fff;
 }
 .filters select {
-    color:#515151;
+  color:#515151;
+  cursor:pointer;
 }
 .filters label {
   cursor:pointer;
@@ -104,6 +105,7 @@ h4 {
 .results [class^="icon-"], .results [class*=" icon-"] {
   font-size:2em;
   vertical-align: middle;
+  margin-right:0.2em;
 }
 .results span {
   margin-bottom:0.5em;
