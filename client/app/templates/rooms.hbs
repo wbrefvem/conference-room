@@ -50,10 +50,9 @@
   </section>
   <section class="results">
     <h2>{{filteredRooms.length}} Rooms available</h2>
-    <br />
-    <ul>
     {{#each building in packagedRooms}}
-      <li><h2>{{building.name}}</h2></li>
+    <h4>{{building.name}}</h4>
+    <ul>
       {{#each room in building.rooms}}
         <li>
           <h3>{{room.name}}</h3>
@@ -74,7 +73,7 @@
           <em>{{room.equipment}}</em>
         </li>
       {{/each}}
-    {{/each}}
     </ul>
+    {{/each}}
   </section>
 </article>
