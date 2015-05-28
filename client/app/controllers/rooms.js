@@ -4,10 +4,10 @@ export default Ember.ArrayController.extend({
   needs: ["application", "buildings"],
 
   selectedBuilding: null,
-  capacityIsDirty: null,
-  capacity: null,
-  conferencePhone: null,
-  projector: null,
+  seatingIsDirty: null,
+  seating: null,
+  phone: null,
+  display: null,
 
   filteredRooms: function() {
     return this.filter(function(item) {
@@ -19,9 +19,9 @@ export default Ember.ArrayController.extend({
       }, this.selectedBuilding)
 
       .filter(function(item) {
-        var capacity = this.get('capacity');
-        if (capacity) {
-          return item.get('capacity') >= capacity;
+        var seating = this.get('seating');
+        if (seating) {
+          return item.get('seating') >= seating;
         } else {
           return true;
         }
@@ -29,25 +29,25 @@ export default Ember.ArrayController.extend({
 
       .filter(function(item) {
         if (this) {
-          return item.get('conferencePhone');
+          return item.get('phone');
         } else {
           return true;
         }
-      }, this.conferencePhone)
+      }, this.phone)
 
       .filter(function(item) {
         if (this) {
-          return item.get('projector');
+          return item.get('display');
         } else {
           return true;
         }
-      }, this.projector);
+      }, this.display);
   }.property(
     'selectedBuilding',
-    'capacity',
-    'conferencePhone',
-    'projector',
-    'capacityIsDirty'
+    'seating',
+    'phone',
+    'display',
+    'seatingIsDirty'
   ),
 
   packagedRooms: function() {

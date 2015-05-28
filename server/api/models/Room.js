@@ -12,7 +12,11 @@ module.exports = {
             model: 'building',
             required: true
         },
-        name: {
+        roomNumber: {
+            type: 'integer',
+            required: true
+        },
+        type: {
             type: 'string',
             required: true
         },
@@ -24,19 +28,23 @@ module.exports = {
             type: 'boolean',
             required: true
         },
-        capacity: {
+        seating: {
             type: 'integer',
             required: true
         },
-        projector: {
+        display: {
             type: 'boolean',
             required: true
         },
-        conferencePhone: {
+        phone: {
             type: 'boolean',
-            required: true,
+            required: true
         },
-        equipment: {
+        network: {
+            type: 'boolean',
+            required: true
+        },
+        usageRestrictions: {
             type: 'string',
             required: true
         },
