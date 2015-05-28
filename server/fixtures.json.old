@@ -1,0 +1,286 @@
+[
+    {
+        "items": [
+            {
+                "id": 1, 
+                "name": "Raleigh Municipal Building", 
+                "address": "222 West Hargett St"
+            }, 
+            {
+                "id": 2, 
+                "name": "One Exchange Plaza", 
+                "address": "1 Exchange Plaza"
+            }
+        ], 
+        "model": "building"
+    }, 
+    {
+        "items": [
+            {
+                "building": 1, 
+                "capacity": 16, 
+                "projector": true, 
+                "equipment": "projector & screen|Conference phone, 919-996-7825|room phone, 919-996-4935", 
+                "manager": "Finance, Andrea Waters", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": true, 
+                "generalUsage": true, 
+                "id": 1, 
+                "name": "Conference room 112 Finance, (Conference Mailto: address)"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 200, 
+                "projector": true, 
+                "equipment": "Screen|Computer", 
+                "manager": "City manager's Office", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": false, 
+                "generalUsage": true, 
+                "id": 2, 
+                "name": "Council Chamber 201, (RMB map link)"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 12, 
+                "projector": false, 
+                "equipment": "None", 
+                "manager": "City Council", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": false, 
+                "generalUsage": false, 
+                "id": 3, 
+                "name": "Conference room 213, (Test of opening calendar event via remote email access)"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 12, 
+                "projector": true, 
+                "equipment": "Camera|LCD displays (2)|Smart board|Conference phone, 919-996-7819", 
+                "manager": "City manager's Office", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": true, 
+                "generalUsage": false, 
+                "id": 4, 
+                "name": "Conf Rm 228"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 16, 
+                "projector": false, 
+                "equipment": "room phone, 919-996-4661|White board (small)?|WiFi (don't most have wifi? YES should it be assumed unless otherwise stated?)", 
+                "manager": "City manager's Office", 
+                "hasUsageRestrictions": false, 
+                "conferencePhone": true, 
+                "generalUsage": true, 
+                "id": 5, 
+                "name": "Conference room 237"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 25, 
+                "projector": true, 
+                "equipment": "Screen and overhead projector (laptop cable available in RMB suite 605)|room phone, 919-996-4292", 
+                "manager": "Parks, Recreation and Cultural Resources / Facilities & Operations", 
+                "hasUsageRestrictions": false, 
+                "conferencePhone": true, 
+                "generalUsage": true, 
+                "id": 6, 
+                "name": "Conference room 303"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 30, 
+                "projector": true, 
+                "equipment": "LCD (front and rear screen with 2 mounted projecters. Cables are not supplied)|VOIP phone, 919-996-4293|White board", 
+                "manager": "City manager's Office", 
+                "hasUsageRestrictions": false, 
+                "conferencePhone": true, 
+                "generalUsage": true, 
+                "id": 7, 
+                "name": "Conference room 305"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 10, 
+                "projector": false, 
+                "equipment": "room phone, 919-996-4294", 
+                "manager": "Budget & Management Services, Nancy Crouse", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": true, 
+                "generalUsage": true, 
+                "id": 8, 
+                "name": "Conference room 309"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 8, 
+                "projector": false, 
+                "equipment": "Network port", 
+                "manager": "Public Works, Sherry Davis", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": false, 
+                "generalUsage": true, 
+                "id": 9, 
+                "name": "Conference room 408"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 10, 
+                "projector": true, 
+                "equipment": "LCD|Network port|TV", 
+                "manager": "Public Works, Sherry Davis", 
+                "hasUsageRestrictions": false, 
+                "conferencePhone": false, 
+                "generalUsage": true, 
+                "id": 10, 
+                "name": "Conference room 419"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 14, 
+                "projector": true, 
+                "equipment": "projector & screen|Conference phone, (number?)|White board (large)", 
+                "manager": "Information Technology, April Webb", 
+                "hasUsageRestrictions": false, 
+                "conferencePhone": true, 
+                "generalUsage": true, 
+                "id": 11, 
+                "name": "TechShowRMB-516"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 10, 
+                "projector": true, 
+                "equipment": "LCD touch screen|Phone, 919-996-4790 (type?)", 
+                "manager": "Parks, Recreation and Cultural Resources", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": true, 
+                "generalUsage": false, 
+                "id": 12, 
+                "name": "Conference room 601"
+            }, 
+            {
+                "building": 1, 
+                "capacity": 10, 
+                "projector": true, 
+                "equipment": "LCD|Phone, 919-996-4809 (type?)|White board", 
+                "manager": "Parks, Recreation and Cultural Resources", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": false, 
+                "generalUsage": false, 
+                "id": 13, 
+                "name": "Conference room 609"
+            }, 
+            {
+                "building": 2, 
+                "capacity": 6, 
+                "projector": false, 
+                "equipment": "Phone (type? number?)", 
+                "manager": "Planning & Development", 
+                "hasUsageRestrictions": false, 
+                "conferencePhone": true, 
+                "generalUsage": true, 
+                "id": 14, 
+                "name": "Conference room 213 One Exchange Plaza"
+            }, 
+            {
+                "building": 2, 
+                "capacity": 0, 
+                "projector": false, 
+                "equipment": "None", 
+                "manager": "Public Works, Debbie Wyatt", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": false, 
+                "generalUsage": true, 
+                "id": 15, 
+                "name": "Conference room 312"
+            }, 
+            {
+                "building": 2, 
+                "capacity": 8, 
+                "projector": false, 
+                "equipment": "Phone (type? number?)", 
+                "manager": "Planning & Development, Cynthia Taylor", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": true, 
+                "generalUsage": false, 
+                "id": 16, 
+                "name": "Conference room OEP 4th Flr Fish Bowl"
+            }, 
+            {
+                "building": 2, 
+                "capacity": 20, 
+                "projector": false, 
+                "equipment": "None", 
+                "manager": "Public Utilities", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": false, 
+                "generalUsage": false, 
+                "id": 17, 
+                "name": "Conference room 1 One Exchange Plaza, Public Utilities 6th Floor"
+            }, 
+            {
+                "building": 2, 
+                "capacity": 10, 
+                "projector": false, 
+                "equipment": "None", 
+                "manager": "Public Utilities", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": false, 
+                "generalUsage": false, 
+                "id": 18, 
+                "name": "Conference room 2 One Exchange Plaza, Public Utilities 6th Floor"
+            }, 
+            {
+                "building": 2, 
+                "capacity": 40, 
+                "projector": false, 
+                "equipment": "None", 
+                "manager": "Parks, Recreation and Cultural Resources / Facilities & Operations", 
+                "hasUsageRestrictions": false, 
+                "conferencePhone": false, 
+                "generalUsage": true, 
+                "id": 19, 
+                "name": "Conference room 701"
+            }, 
+            {
+                "building": 2, 
+                "capacity": 8, 
+                "projector": false, 
+                "equipment": "Phone (type? number?)|Smartboard", 
+                "manager": "Planning & Development, Amanda Driscoll", 
+                "hasUsageRestrictions": false, 
+                "conferencePhone": true, 
+                "generalUsage": true, 
+                "id": 20, 
+                "name": "Conference room 707"
+            }, 
+            {
+                "building": 2, 
+                "capacity": 10, 
+                "projector": true, 
+                "equipment": "LCD|SmartBoard|Conference phone, (number?)", 
+                "manager": "Information Technology, April Webb", 
+                "hasUsageRestrictions": false, 
+                "conferencePhone": true, 
+                "generalUsage": true, 
+                "id": 21, 
+                "name": "TechShowOEP-901"
+            }, 
+            {
+                "building": 2, 
+                "capacity": 0, 
+                "projector": false, 
+                "equipment": "None", 
+                "manager": "City Attorney", 
+                "hasUsageRestrictions": true, 
+                "conferencePhone": false, 
+                "generalUsage": false, 
+                "id": 22, 
+                "name": "Conference room CA (10th Floor) (NOT in Email?)"
+            }
+        ], 
+        "model": "room"
+    }
+]

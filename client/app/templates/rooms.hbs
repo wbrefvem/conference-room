@@ -21,24 +21,24 @@
         </li>
         <li class="hidden">
           <label for="Attendees">
-            {{input type="number" placeholder="# of people" value=capacity}}
+            {{input type="number" placeholder="# of people" value=seating}}
           </label>
         </li>
         <li>
-          {{input type="checkbox" name="capacity" checked=5 viewName="capacity"}}
-          <label {{bind-attr for="view.capacity.elementId"}}>5 <span class="icon-person"></span></label>
-          {{input type="checkbox" name="capacity" checked=10 viewName="capacity"}}
-          <label {{bind-attr for="view.capacity.elementId"}}>10 <span class="icon-person"></span></label>
-          {{input type="checkbox" name="capacity" checked=15 viewName="capacity"}}
-          <label {{bind-attr for="view.capacity.elementId"}}>15 <span class="icon-person"></span></label>
+          {{input type="checkbox" name="seating" checked=5 viewName="seating"}}
+          <label {{bind-attr for="view.seating.elementId"}}>5 <span class="icon-person"></span></label>
+          {{input type="checkbox" name="seating" checked=10 viewName="seating"}}
+          <label {{bind-attr for="view.seating.elementId"}}>10 <span class="icon-person"></span></label>
+          {{input type="checkbox" name="seating" checked=15 viewName="seating"}}
+          <label {{bind-attr for="view.seating.elementId"}}>15 <span class="icon-person"></span></label>
         </li>
         <li>
-          {{input type="checkbox" name="projector" checked=projector viewName="projector"}}
-          <label {{bind-attr for="view.projector.elementId"}}><span class="icon-projector"></span> Projector</label>
+          {{input type="checkbox" name="display" checked=display viewName="display"}}
+          <label {{bind-attr for="view.display.elementId"}}><span class="icon-projector"></span> display</label>
         </li>
         <li>
-          {{input type="checkbox" name="conferencePhone" checked=conferencePhone viewName="conferencePhone"}}
-          <label {{bind-attr for="view.conferencePhone.elementId"}}><span class="icon-phone"></span> Conference Phone</label>
+          {{input type="checkbox" name="phone" checked=phone viewName="phone"}}
+          <label {{bind-attr for="view.phone.elementId"}}><span class="icon-phone"></span> Conference Phone</label>
         </li>
         <li class="hidden">
           <label for="Search">
@@ -55,19 +55,17 @@
     <ul>
       {{#each room in building.rooms}}
         <li>
-          <h3>{{room.name}}</h3>
-          {{#if room.projector}}
+          <h3>{{room.type}} {{room.roomNumber}}</h3>
+          {{#if room.display}}
             <span class="icon-projector"></span>
           {{/if}}
-          {{#if room.conferencePhone}}
+          {{#if room.phone}}
             <span class="icon-phone"></span>
           {{/if}}
-          {{room.capacity}} <span class="icon-person"></span>
+          {{room.seating}} <span class="icon-person"></span>
           {{#if room.hasUsageRestrictions}}
-            {{#if room.generalUsage}}
             <br/>
-            <span class="icon-warning"></span> {{room.manager}}
-            {{/if}}
+            <span class="icon-warning"></span> {{room.manager}}, {{room.usageRestrictions}}
           {{/if}}
           <br/>
           <em>{{room.equipment}}</em>

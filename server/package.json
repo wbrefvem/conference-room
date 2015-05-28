@@ -28,6 +28,7 @@
   "author": "refvemw",
   "license": "",
   "devDependencies": {
+    "async": "^1.0.0",
     "grunt": "^0.4.5",
     "lodash": "^3.5.0"
   }
