@@ -124,7 +124,7 @@
                 "usageRestrictions": "None", 
                 "roomNumber": "516", 
                 "generalUsage": true, 
-                "type": "Tech Show", 
+                "type": "Conference Room", 
                 "display": true
             }, 
             {
@@ -220,11 +220,11 @@
                 "building": 2, 
                 "network": false, 
                 "usageRestrictions": "None", 
-                "roomNumber": "901", 
+                "roomNumber": "900-A", 
                 "generalUsage": true, 
-                "type": "Tech Show", 
+                "type": "Conference Room", 
                 "display": true
-            }, 
+            },
             {
                 "seating": "0", 
                 "phone": false, 
