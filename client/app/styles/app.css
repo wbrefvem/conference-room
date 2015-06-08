@@ -42,13 +42,12 @@ form input, form select {
     box-shadow: inset 0 -2px #dedede;
 }
 header {
-    background:#3c61a5;
+    background:#4d4d4d;
     padding:1em;
     position: relative;
     z-index: 1;
     line-height: 4em;
     text-align: center;
-    border-bottom: 0.25em solid #23488C;
     -webkit-box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
     box-shadow: inset 0 -1px rgba(255,255,255,0.05),0 1px rgba(0,0,0,0.05);
 }
@@ -73,19 +72,19 @@ h3 {
     margin-bottom:0.5em;
 }
 h4 {
-  background:#657838;
+  background:#orange;
   padding:0.25em;
   margin-bottom: 0;
   border-radius: 5px;
   display: inline-block;
-  color: #fff;
+  color: #4d4d4d;
 }
 .filters {
   position:fixed;
   right:0;
   /*float: right;
   width:25%;*/
-  background: #657838;
+  background: orange;
   color:#fff;
 }
 .filters select {
@@ -103,7 +102,7 @@ h4 {
     padding:1em 0;
 }
 .results [class^="icon-"], .results [class*=" icon-"] {
-  font-size:2em;
+  font-size:1.5em;
   vertical-align: middle;
   margin-right:0.2em;
 }
@@ -314,7 +313,7 @@ box-shadow:none;
 }
 
 .custom {
-  background: #324505;
+  background: #4d4d4d;
   overflow: hidden;
   height:45px;
 }
@@ -351,11 +350,12 @@ box-shadow:none;
 }
 [type="checkbox"]:not(:checked) + label
 {
-  color:#324505;
-  text-shadow:0 1px 0 #98AB6B;
+  color:#999;
+  text-shadow:0 1px 0 #c8c8c8;
 }
 [type="checkbox"]:checked + label {
-  color:#fff;
+  color:#4d4d4d;
+  text-shadow:0 1px 0 #c8c8c8;
 }
 /*
 [type="checkbox"]:not(:checked) + label:before,
