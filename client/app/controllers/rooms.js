@@ -53,7 +53,6 @@ export default Ember.ArrayController.extend({
   packagedRooms: function() {
     var rooms = this.get('filteredRooms');
 
-
     var buildingIds = [];
     var buildingArray = [];
 
@@ -87,7 +86,7 @@ export default Ember.ArrayController.extend({
       packaged.addObject(newObject);
     }
 
-    buildings.forEach(buildingIteratorCallback, this);
+    buildings.forEach(buildingIteratorCallback, rooms);
 
     return packaged;
   }.property('filteredRooms'),
