@@ -13,7 +13,7 @@ module.exports = {
             required: true
         },
         roomNumber: {
-            type: 'integer',
+            type: 'string',
             required: true
         },
         type: {
