@@ -458,4 +458,4 @@ box-shadow:none;
 .icon-warning:before {
     content: "\e603";
 }
-
+small {font-size: 60%;}
