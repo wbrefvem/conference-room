@@ -358,8 +358,18 @@ box-shadow:none;
   text-shadow:0 1px 0 #c8c8c8;
 }
 [type="number"] {
-  color:#999;
-  text-shadow:0 1px 0 #c8c8c8;
+  position: relative;
+  z-index: 1;
+  background: #4d4d4d;
+  -webkit-appearance: none;
+  height: 40px;
+  border: none;
+  color: #fff;
+  width: 110%;
+  font-size: 1em;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
 }
 /*
 [type="checkbox"]:not(:checked) + label:before,
