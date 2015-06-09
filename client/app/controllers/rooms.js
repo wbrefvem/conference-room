@@ -4,7 +4,6 @@ export default Ember.ArrayController.extend({
   needs: ["application", "buildings"],
 
   selectedBuilding: null,
-  seatingIsDirty: null,
   seating: null,
   phone: null,
   display: null,
@@ -20,6 +19,7 @@ export default Ember.ArrayController.extend({
 
       .filter(function(item) {
         var seating = this.get('seating');
+
         if (seating) {
           return item.get('seating') >= seating;
         } else {

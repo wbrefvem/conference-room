@@ -357,6 +357,10 @@ box-shadow:none;
   color:#4d4d4d;
   text-shadow:0 1px 0 #c8c8c8;
 }
+[type="number"] {
+  color:#999;
+  text-shadow:0 1px 0 #c8c8c8;
+}
 /*
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before,
