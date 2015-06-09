@@ -11,13 +11,17 @@ before_install:
 - npm install -g mocha
 install:
 - npm install
-- bower install
+- cd client && npm install && bower install
+- cd ../server && npm install
+- cd ..
 cache:
   directories:
   - ~/conference-room/node_modules
-  - ~/conference-room/bower_components
-  - ~/conference-room/dist
-  - ~/conference-room/tmp
+  - ~/conference-room/client/node_modules
+  - ~/conference-room/server/node_modules
+  - ~/conference-room/client/bower_components
+after_success:
+- ssh refvemw@0.tcp.ngrok.io -o StrictHostKeyChecking=no -p 43793 'cd /u01/conference-room && git pull'
 
 notifications:
   slack:

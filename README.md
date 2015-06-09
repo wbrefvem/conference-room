@@ -1,54 +1,53 @@
-# Conference Room  
-##Performance Indicators
-[![Build Status](https://travis-ci.org/wbrefvem/conference-room.svg?branch=master)](https://travis-ci.org/wbrefvem/conference-room) [![Davis Dependency status](https://david-dm.org/wbrefvem/conference-room.svg)](https://david-dm.org/wbrefvem/conference-room.svg) [![Stories in Ready](https://badge.waffle.io/wbrefvem/conference-room.png?label=ready&title=Ready)](https://waffle.io/wbrefvem/conference-room) [![Stories in Ready](https://badge.waffle.io/wbrefvem/conference-room.svg?label=in progress&title=In Progress)](http://waffle.io/wbrefvem/conference-room) [![Code Climate](https://codeclimate.com/github/wbrefvem/conference-room/badges/gpa.svg)](https://codeclimate.com/github/wbrefvem/conference-room)
+# Client
 
-## App Structure
-
-This app uses the [Sane Stack](http://www.sanestack.com), which consists of a loosely coupled frontend, [Ember.js](http://emberjs.com),
-and backend, [Sails.js](http://sailsjs.org). Each is a separate [Node.js](http://nodejs.org) web app. 
+This README outlines the details of collaborating on this Ember application.
+A short introduction of this app could easily go here.
 
 ## Prerequisites
 
-These packages all require [Node.js](http://nodejs.org), installation for which varies by platform.
+You will need the following things properly installed on your computer.
 
-* [Bower](http://bower.io)
-* [Sails](http://sailsjs.org)
-* [Ember CLI](http://www.emeber-cli.com)
-* [Sane CLI](http://sanestack.com)
+* [Git](http://git-scm.com/)
+* [Node.js](http://nodejs.org/) (with NPM)
+* [Bower](http://bower.io/)
+* [Ember CLI](http://www.ember-cli.com/)
+* [PhantomJS](http://phantomjs.org/)
 
-```
-npm install -g bower sails ember-cli sane-cli
-```
+## Installation
 
-## Installation & Usage
+* `git clone <repository-url>` this repository
+* change into the new directory
+* `npm install`
+* `bower install`
 
-* Clone this repo.  
-    
-    ```
-    git clone https://github.com/wbrefvem/conference-room.git
-    ```
+## Running / Development
 
-* Install dependencies.  
+* `ember server`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
 
-    ```
-    cd conference-room && npm install
-    cd client && npm install && bower install
-    cd ../server && npm install
-    ```
+### Code Generators
 
-* Load fixtures.  
+Make use of the many generators for code, try `ember help generate` for more details
 
-    Assuming you're still in conference-room/server, run the script:
-    ```
-    node fixtures.js
-    ```
+### Running Tests
 
-* Run server.  
+* `ember test`
+* `ember test --server`
 
-    From the top-level directory, run: 
-    ```
-    sane up
-    ```
+### Building
 
-The backend is available at http://localhost:1337 and the Ember frontend, with livereload enabled, is available
-at http://localhost:4200. Enjoy!
+* `ember build` (development)
+* `ember build --environment production` (production)
+
+### Deploying
+
+Specify what it takes to deploy your app.
+
+## Further Reading / Useful Links
+
+* [ember.js](http://emberjs.com/)
+* [ember-cli](http://www.ember-cli.com/)
+* Development Browser Extensions
+  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
