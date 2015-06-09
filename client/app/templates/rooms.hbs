@@ -19,18 +19,19 @@
             <input id="DateTime" type="datetime-local">
           </label>
         </li>
-        <li class="hidden">
+        <li>
           <label for="Attendees">
             {{input type="number" placeholder="# of people" value=seating}}
           </label>
         </li>
-        <li>
-          {{input type="checkbox" name="seating" checked=5 viewName="seating"}}
-          <label {{bind-attr for="view.seating.elementId"}}>5 <span class="icon-person"></span></label>
-          {{input type="checkbox" name="seating" checked=10 viewName="seating"}}
-          <label {{bind-attr for="view.seating.elementId"}}>10 <span class="icon-person"></span></label>
-          {{input type="checkbox" name="seating" checked=15 viewName="seating"}}
-          <label {{bind-attr for="view.seating.elementId"}}>15 <span class="icon-person"></span></label>
+        <li class="hidden">
+          {{input type="checkbox" name="5" viewName="5" checked=seating5}}
+          <label {{bind-attr for="view.5.elementId"}}>5 <span class="icon-person"></span></label>
+          {{input type="checkbox" name="10" viewName="10" checked=seating10}}
+          <label {{bind-attr for="view.10.elementId"}}>10 <span class="icon-person"></span></label>
+          {{input type="checkbox" name="15" viewName="15" checked=seating15}}
+          <label {{bind-attr for="view.15.elementId"}}>15 <span class="icon-person"></span></label>
+          {{input class="seating" type="hidden" name="seating" value=seating}}
         </li>
         <li>
           {{input type="checkbox" name="display" checked=display viewName="display"}}
