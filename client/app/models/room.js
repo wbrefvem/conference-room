@@ -3,7 +3,7 @@ import DS from "ember-data";
 var Room = DS.Model.extend({
     building: DS.belongsTo('building'),
     roomNumber: DS.attr('string'),
-    type: DS.attr('string'),
+    roomType: DS.attr('string'),
     manager: DS.attr('string'),
     generalUsage: DS.attr('boolean'),
     seating: DS.attr('number'),

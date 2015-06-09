@@ -31,7 +31,6 @@
           <label {{bind-attr for="view.10.elementId"}}>10 <span class="icon-person"></span></label>
           {{input type="checkbox" name="15" viewName="15" checked=seating15}}
           <label {{bind-attr for="view.15.elementId"}}>15 <span class="icon-person"></span></label>
-          {{input class="seating" type="hidden" name="seating" value=seating}}
         </li>
         <li>
           {{input type="checkbox" name="display" checked=display viewName="display"}}
@@ -56,7 +55,7 @@
     <ul>
       {{#each room in building.rooms}}
         <li>
-          <h3>{{room.type}} {{room.roomNumber}}</h3>
+          <h3>{{room.roomType}} {{room.roomNumber}}</h3>
           {{#if room.display}}
             <span class="icon-projector"></span>
           {{/if}}
