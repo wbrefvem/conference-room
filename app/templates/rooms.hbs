@@ -21,6 +21,7 @@
         </li>
         <li>
           <label for="Attendees">
+            <span class="icon-person"></span>
             {{input type="number" placeholder="# of people" value=seating}}
           </label>
         </li>
@@ -34,11 +35,11 @@
         </li>
         <li>
           {{input type="checkbox" name="display" checked=display viewName="display"}}
-          <label {{bind-attr for="view.display.elementId"}}><span class="icon-projector"></span> display</label>
+          <label {{bind-attr for="view.display.elementId"}}><span class="icon-projector"></span> Display</label>
         </li>
         <li>
           {{input type="checkbox" name="phone" checked=phone viewName="phone"}}
-          <label {{bind-attr for="view.phone.elementId"}}><span class="icon-phone"></span> Conference Phone</label>
+          <label {{bind-attr for="view.phone.elementId"}}><span class="icon-phone"></span>Conference Phone</label>
         </li>
         <li class="hidden">
           <label for="Search">
@@ -47,6 +48,14 @@
         </li>
       </ul>
     </form>
+    <div class="feedback">
+      <ul>
+        <li><em>Phase 2 will integrate with outlook to book a room</em></li>
+        <li><a href="mailto:chris.geyer@raleighnc.gov?Subject=Conference Room App Feedback">Send us feedback about this app</a></li>
+        <li><br/></li>
+        <li><a href="mailto:will.refvem@raleighnc.gov?Subject=Conference Room Data Feedback">Tell us about wrong room information</a></li>
+      </ul>
+    </div>
   </section>
   <section class="results">
     <h2>{{filteredRooms.length}} Rooms available</h2>
