@@ -4,6 +4,7 @@
       <ul>
         <li>
           <label for="Buildings">
+          	<span class="icon-office"></span>
             <div class="custom">
             {{view "select"
               content=buildings
@@ -14,24 +15,11 @@
             </div>
           </label>
         </li>
-        <li class="hidden">
-          <label for="DateTime">
-            <input id="DateTime" type="datetime-local">
-          </label>
-        </li>
         <li>
           <label for="Attendees">
             <span class="icon-person"></span>
             {{input type="number" placeholder="# of people" value=seating}}
           </label>
-        </li>
-        <li class="hidden">
-          {{input type="checkbox" name="5" viewName="5" checked=seating5}}
-          <label {{bind-attr for="view.5.elementId"}}>5 <span class="icon-person"></span></label>
-          {{input type="checkbox" name="10" viewName="10" checked=seating10}}
-          <label {{bind-attr for="view.10.elementId"}}>10 <span class="icon-person"></span></label>
-          {{input type="checkbox" name="15" viewName="15" checked=seating15}}
-          <label {{bind-attr for="view.15.elementId"}}>15 <span class="icon-person"></span></label>
         </li>
         <li>
           {{input type="checkbox" name="display" checked=display viewName="display"}}
@@ -40,6 +28,11 @@
         <li>
           {{input type="checkbox" name="phone" checked=phone viewName="phone"}}
           <label {{bind-attr for="view.phone.elementId"}}><span class="icon-phone"></span>Conference Phone</label>
+        </li>
+        <li class="hidden">
+          <label for="DateTime">
+            <input id="DateTime" type="datetime-local">
+          </label>
         </li>
         <li class="hidden">
           <label for="Search">
@@ -71,13 +64,13 @@
           {{#if room.phone}}
             <span class="icon-phone"></span>
           {{/if}}
+          {{#if room.network}}
+            <span class="icon-network"></span>
+          {{/if}}
           {{room.seating}} <span class="icon-person"></span>
           {{#if room.hasUsageRestrictions}}
-            <br/>
             <span class="icon-warning"></span> {{room.usageRestrictions}} - contact {{room.manager}}
           {{/if}}
-          <br/>
-          <em>{{room.network}}</em>
         </li>
       {{/each}}
     </ul>
