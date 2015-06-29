@@ -22,12 +22,10 @@
           </label>
         </li>
         <li>
-          {{input type="checkbox" name="display" checked=display viewName="display"}}
-          <label {{bind-attr for="view.display.elementId"}}><span class="icon-projector"></span> Display</label>
+          {{display-input checked=display name="display"}}
         </li>
         <li>
-          {{input type="checkbox" name="phone" checked=phone viewName="phone"}}
-          <label {{bind-attr for="view.phone.elementId"}}><span class="icon-phone"></span>Conference Phone</label>
+          {{phone-input checked=phone name="phone"}}
         </li>
         <li class="hidden">
           <label for="DateTime">
@@ -52,10 +50,10 @@
   </section>
   <section class="results">
     <h2>{{filteredRooms.length}} Rooms available</h2>
-    {{#each building in packagedRooms}}
+    {{#each packagedRooms key="@guid" as |building|}}
     <h4>{{building.name}}</h4>
     <ul>
-      {{#each room in building.rooms}}
+      {{#each building.rooms key="@guid" as |room|}}
         <li>
           <h3>{{room.roomType}} {{room.roomNumber}}</h3>
           {{#if room.display}}
