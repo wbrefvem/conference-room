@@ -18,7 +18,13 @@ cache:
   - ~/conference-room/bower_components
   - ~/conference-room/dist
   - ~/conference-room/tmp
-
 notifications:
   slack:
     secure: di870+2Ue/U5CZud2UOG7k/yByYi5q9G7UOQneJFy+tq4SncXLexJn9yqw9VpgZ6H/8dFEJ/49HgFY0/Ntx+5WaBO3sGNWen+uPBPY2NVmN6Pfsox3lUJRy53jtFjQk9aHBIJVew6Fh6IUoWLP/Dk1MjDQqAVH0KSBL5lQLequY=
+deploy:
+  provider: heroku
+  api_key:
+    secure: e068nt2tRZLtW6HLPiSZQMb618UTC4rtbkt/m1ueSfQkzGqJc8UWwKuJz02witewp3KUPsmvIPz8rOCy9y7Dc4sUJAeO8p3bnXx70DHhr3uE9sLFFjlBLak0EvgtRXDLNgtDKD/TJXDb/iTJwWSlHG2QysWwRP5JiM1r0JqRQdM=
+  app: conference-room-web
+  on:
+    repo: wbrefvem/conference-room
