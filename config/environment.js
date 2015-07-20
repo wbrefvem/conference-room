@@ -37,6 +37,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.API_SERVER_URL = 'https://conference-room-api.herokuapp.com';
   }
 
   if (environment === 'test') {
@@ -55,6 +56,7 @@ module.exports = function(environment) {
     ENV.googleAnalytics = {
       webPropertyId: 'UA-XXXX-Y'
     };
+    ENV.APP.API_SERVER_URL = 'http://mapststarcsrv3:8008';
   }
 
   return ENV;
