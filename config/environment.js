@@ -56,7 +56,7 @@ module.exports = function(environment) {
     ENV.googleAnalytics = {
       webPropertyId: 'UA-XXXX-Y'
     };
-    ENV.APP.API_SERVER_URL = 'http://192.99.100:8008';
+    ENV.APP.API_SERVER_URL = 'http://localhost:8008';
   }
 
   return ENV;
