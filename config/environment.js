@@ -56,7 +56,7 @@ module.exports = function(environment) {
     ENV.googleAnalytics = {
       webPropertyId: 'UA-XXXX-Y'
     };
-    ENV.APP.API_SERVER_URL = 'http://localhost:8008';
+    ENV.APP.API_SERVER_URL = 'http://gisconprdapplv1:8008';
   }
 
   return ENV;
