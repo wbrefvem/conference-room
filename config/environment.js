@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'client',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/rooms/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -42,7 +42,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
+    ENV.baseURL = '/rooms/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
