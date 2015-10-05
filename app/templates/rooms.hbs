@@ -1,6 +1,6 @@
 <article>
   <section class="filters">
-    <form id="searchForm" role="form" action="/;jsessionid=61B10B6F9C08053BE8BC9B7447D2DFD5" method="post">
+    <form id="searchForm" role="form" action="">
       <ul>
         <li>
           <label for="Buildings">
@@ -16,10 +16,7 @@
           </label>
         </li>
         <li>
-          <label for="Attendees">
-            <span class="icon-person"></span>
-            {{input type="number" placeholder="# of people" value=seating}}
-          </label>
+          {{capacity-input seating=seating name="capacity"}}
         </li>
         <li>
           {{display-input checked=display name="display"}}
