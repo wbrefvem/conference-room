@@ -37,7 +37,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.APP.API_SERVER_URL = 'http://192.168.99.100:8008';
+    ENV.APP.API_SERVER_URL = 'https://conference-room-api.herokuapp.com';
   }
 
   if (environment === 'test') {
