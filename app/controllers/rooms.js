@@ -11,7 +11,7 @@ export default Ember.ArrayController.extend({
   filteredRooms: function() {
     return this.filter(function(item) {
         if (this !== null) {
-          return item.get('building').id === this.get('id');     
+          return item.get('building').id === this;     
         } else {
           return true;
         }

@@ -6,12 +6,7 @@
           <label for="Buildings">
           	<span class="icon-office"></span>
             <div class="custom">
-            {{view "select"
-              content=buildings
-              optionValuePath="content.id"
-              optionLabelPath="content.name"
-              selection=selectedBuilding
-              prompt="Any building"}}
+              {{building-select content=buildings selectedValue=selectedBuilding action=(action (mut mySelectedItem))}}
             </div>
           </label>
         </li>

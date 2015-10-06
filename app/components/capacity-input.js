@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+const ENTER_KEY = 13;
+
 export default Ember.Component.extend({
   inputElementId: null,
   
@@ -11,6 +13,8 @@ export default Ember.Component.extend({
   },
 
   keyPress: function(e) {
-    e.preventDefault();
+    if (e.charCode === ENTER_KEY) {
+      e.preventDefault();
+    }
   }
 });
