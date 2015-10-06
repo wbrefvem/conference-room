@@ -42,7 +42,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/rooms/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
@@ -50,6 +49,7 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.API_SERVER_URL = 'https://conference-room-api.herokuapp.com';
   }
 
   if (environment === 'production') {
