@@ -450,3 +450,7 @@ box-shadow:none;
 }
 small {font-size: 60%;}
 .feedback {background:#ececec; padding:1em; border:1px solid #ddd; color:#333;}
+
+select::-ms-expand {
+  display: none;
+}
