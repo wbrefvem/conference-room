@@ -1,3 +1,4 @@
+
 import Ember from "ember";
 
 export default Ember.ArrayController.extend({
@@ -46,8 +47,7 @@ export default Ember.ArrayController.extend({
     'selectedBuilding',
     'seating',
     'phone',
-    'display',
-    'seatingIsDirty'
+    'display'
   ),
 
   packagedRooms: function() {
@@ -73,7 +73,11 @@ export default Ember.ArrayController.extend({
       var newObject = {
         id: item.id,
         name: item.name,
-        rooms: this.filter(roomFilter)
+        rooms: this.filter(roomFilter).sort(function(a, b) {
+          var _a = parseInt(a.get('roomNumber'));
+          var _b = parseInt(b.get('roomNumber'));
+          return _a - _b;
+        })
       };
 
       function roomFilter(room) {
