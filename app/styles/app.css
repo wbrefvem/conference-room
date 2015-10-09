@@ -271,8 +271,9 @@ box-shadow:none;
 .custom select {
   position: relative;
   z-index: 1;
-  background: #4d4d4d;
+  background: transparent;
   -webkit-appearance: none;
+  -moz-appearance: none;
   height: 40px;
   width:100%;
   border: none;
@@ -281,6 +282,9 @@ box-shadow:none;
   border-radius: 0;
   box-shadow: none;
   margin: 0;
+}
+.custom select option {
+  background: #4d4d4d;
 }
 .custom:after {
   z-index: 0;
