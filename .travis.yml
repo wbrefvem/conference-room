@@ -1,6 +1,7 @@
 language: node_js
 node_js:
 - '4.0'
+- '4.1'
 before_install:
 - npm config set spin false
 - npm install -g bower
@@ -22,3 +23,6 @@ deploy:
   api_key:
     secure: e068nt2tRZLtW6HLPiSZQMb618UTC4rtbkt/m1ueSfQkzGqJc8UWwKuJz02witewp3KUPsmvIPz8rOCy9y7Dc4sUJAeO8p3bnXx70DHhr3uE9sLFFjlBLak0EvgtRXDLNgtDKD/TJXDb/iTJwWSlHG2QysWwRP5JiM1r0JqRQdM=
   app: conference-room-web
+  on:
+    node_js: 4.1
+    repo: wbrefvem/conference-room
