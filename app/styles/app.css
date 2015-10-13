@@ -274,7 +274,7 @@ box-shadow:none;
 .custom select {
   position: relative;
   z-index: 1;
-  background: transparent;
+  /*background: transparent;*/
   -webkit-appearance: none;
   -moz-appearance: none;
   height: 40px;
