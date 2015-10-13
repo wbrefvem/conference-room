@@ -287,7 +287,7 @@ box-shadow:none;
   margin: 0;
 }
 .custom select option {
-  background: rgb(236,236,236);
+  background: #4d4d4d;
 }
 .custom:after {
   z-index: 0;
@@ -462,9 +462,7 @@ select::-ms-expand {
   display: none;
 }
 
-input:focus, select:focus {
+select:focus, input:focus {
   outline: 0;
-  border:1px solid orange;
-  background-color:rgb(236, 236, 236);
-  color:rgb(81, 81, 81);
+  border:1px solid white;
 }
