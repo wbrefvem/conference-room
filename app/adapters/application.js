@@ -10,5 +10,9 @@ export default DS.RESTAdapter.extend({
   pathForType: function(type) {
     var dasherized = Ember.String.dasherize(type);
     return Ember.String.pluralize(dasherized);
+  },
+
+  shouldReloadAll: function() {
+    return true;
   }
 });

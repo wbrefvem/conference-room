@@ -1,8 +1,9 @@
 
 import Ember from "ember";
 
-export default Ember.ArrayController.extend({
-  needs: ["application", "buildings"],
+export default Ember.Controller.extend({
+  application: Ember.inject.controller(),
+  //buildings: Ember.inject.controller(),
 
   selectedBuilding: null,
   seating: null,
@@ -10,7 +11,7 @@ export default Ember.ArrayController.extend({
   display: null,
 
   filteredRooms: function() {
-    return this.filter(function(item) {
+    return this.model.filter(function(item) {
         if (this !== null) {
           return item.get('building').id === this;     
         } else {
@@ -96,6 +97,6 @@ export default Ember.ArrayController.extend({
   }.property('filteredRooms'),
 
   buildings: function() {
-    return this.store.find('building');
+    return this.store.findAll('building');
   }.property(),
 });

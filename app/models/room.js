@@ -1,7 +1,7 @@
 import DS from "ember-data";
 
 var Room = DS.Model.extend({
-    building: DS.belongsTo('building'),
+    building: DS.belongsTo('building', { async: false }),
     roomNumber: DS.attr('string'),
     roomType: DS.attr('string'),
     manager: DS.attr('string'),

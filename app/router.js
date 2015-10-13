@@ -6,7 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.resource('rooms', { path: '/' });
+    this.route('rooms', { 
+      resetNamespace: true,
+      path: '/' 
+    });
 });
 
 export default Router;

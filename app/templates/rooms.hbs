@@ -42,10 +42,10 @@
   </section>
   <section class="results">
     <h2>{{filteredRooms.length}} Rooms available</h2>
-    {{#each packagedRooms key="@guid" as |building|}}
+    {{#each packagedRooms as |building|}}
     <h4>{{building.name}}</h4>
     <ul>
-      {{#each building.rooms key="@guid" as |room|}}
+      {{#each building.rooms as |room|}}
         <li>
           <h3>{{room.roomType}} {{room.roomNumber}}</h3>
           {{#if room.display}}
