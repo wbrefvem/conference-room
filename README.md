@@ -1,6 +1,7 @@
 # Conference Room app -- Client 
 
 [![Stories in Ready](https://badge.waffle.io/wbrefvem/conference-room.png?label=ready&title=Ready)](https://waffle.io/wbrefvem/conference-room)
+[![Build Status](https://travis-ci.org/wbrefvem/conference-room.svg?branch=master)](https://travis-ci.org/wbrefvem/conference-room)
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
