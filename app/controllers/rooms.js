@@ -3,12 +3,12 @@ import Ember from "ember";
 
 export default Ember.Controller.extend({
   application: Ember.inject.controller(),
-  //buildings: Ember.inject.controller(),
 
   selectedBuilding: null,
   seating: null,
   phone: null,
   display: null,
+  network: null,
 
   filteredRooms: function() {
     return this.model.filter(function(item) {
@@ -43,12 +43,21 @@ export default Ember.Controller.extend({
         } else {
           return true;
         }
-      }, this.display);
+      }, this.display)
+
+      .filter(function(item) {
+        if (this) {
+          return item.get('network');
+        } else {
+          return true;
+        }
+      }, this.network);
   }.property(
     'selectedBuilding',
     'seating',
     'phone',
-    'display'
+    'display',
+    'network'
   ),
 
   packagedRooms: function() {
@@ -61,7 +70,10 @@ export default Ember.Controller.extend({
       var id = item.get('building').get('id');
       if (buildingIds.indexOf(id) < 0) {
         buildingIds.push(id);
-        buildingArray.push({ id: item.get('building').get('id'), name: item.get('building').get('name') });
+        buildingArray.push({ 
+          id: item.get('building').get('id'), 
+          name: item.get('building').get('name') 
+        });
       }
     });
 

@@ -14,10 +14,13 @@
           {{capacity-input seating=seating name="capacity"}}
         </li>
         <li>
-          {{display-input checked=display name="display"}}
+          {{checkbox-input activeColor="#ffffff" inactiveColor="#999999" checked=display name="display" label="Display" icon="projector"}}
         </li>
         <li>
-          {{phone-input checked=phone name="phone"}}
+          {{checkbox-input activeColor="#ffffff" inactiveColor="#999999" checked=phone name="phone" label="Phone" icon="phone"}}
+        </li>
+        <li>
+          {{checkbox-input activeColor="#ffffff" inactiveColor="#999999" checked=network name="network" label="Network" icon="network"}}
         </li>
         <li class="hidden">
           <label for="DateTime">

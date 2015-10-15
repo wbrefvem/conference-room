@@ -274,7 +274,7 @@ box-shadow:none;
 .custom select {
   position: relative;
   z-index: 1;
-  /*background: transparent;*/
+  background-color: #4d4d4d;
   -webkit-appearance: none;
   -moz-appearance: none;
   height: 40px;
@@ -449,7 +449,7 @@ box-shadow:none;
 	vertical-align: middle;
 	color:#999;
 }
-.filters .icon-projector, .filters .icon-phone {
+.filters .icon-projector, .filters .icon-phone, .filters .icon-network{
   margin-right:0.4em;
 }
 .filters [class^="icon-"], .results [class*=" icon-"] {
