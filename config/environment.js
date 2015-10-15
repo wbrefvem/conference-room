@@ -38,6 +38,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.APP.API_SERVER_URL = 'http://localhost:8008';
+    ENV.contentSecurityPolicy['style-src'] = "'unsafe-inline' " + ENV.contentSecurityPolicy['style-src'];
   }
 
   if (environment === 'test') {
