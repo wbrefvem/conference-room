@@ -33,10 +33,10 @@ export default Ember.Component.extend({
   },
 
   toggleColor: function($element, self) {
-    if (self.get('seating') == 0) {
-      $element.css('color', '#999');
-    } else {
+    if (parseInt(self.get('seating'))) {
       $element.css('color', '#fff');
+    } else {
+      $element.css('color', '#999');
     }
   }
 });
