@@ -3,16 +3,23 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   queryParams: ['seating', 'phone', 'display', 'network'],
 
-  seating: null,
-  phone: null,
-  display: null,
-  network: null,
+  seating: 0,
+  phone: false,
+  display: false,
+  network: false,
+
+  selectedBuilding: null,
 
   filteredRooms: function() {
-    console.log('filtered rooms...');
+
+    function concat(a, b) {
+      return a.toArray().concat(b.toArray());
+    }
+    
     var rooms = this.model.reduce(function(previous, current) {
-      return Ember.computed.union(previous,Ember.ArrayProxy.create({ content: current.get('rooms').toArray() }));
+      return concat(previous, Ember.ArrayProxy.create({ content: current.get('rooms').toArray() }));
     }, Ember.ArrayProxy.create({ content: [] }));
+    
     return rooms.filter(function(item) {
       var seating = this.get('seating');
 
@@ -46,6 +53,7 @@ export default Ember.Controller.extend({
         return true;
       }
     }, this.network);
+
   }.property(
     'seating',
     'phone',
@@ -55,9 +63,24 @@ export default Ember.Controller.extend({
 
   triggerTransitionToRoute(model) {
     if (!model) {
-      this.transitionToRoute('buildings.list');
+      this.transitionToRoute('buildings.list', {
+        queryParams: {
+          seating: this.get('seating'),
+          phone: this.get('phone'),
+          display: this.get('display'),
+          network: this.get('network')
+        }
+      });
     } else {
-      this.transitionToRoute('buildings.detail', parseInt(model));
+      this.transitionToRoute('buildings.detail', parseInt(model), {
+        queryParams: {
+          seating: this.get('seating'),
+          phone: this.get('phone'),
+          display: this.get('display'),
+          network: this.get('network')
+        }
+      });
+      this.notifyPropertyChange('filteredRooms');
     }
   }  
 });

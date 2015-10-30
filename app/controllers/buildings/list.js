@@ -3,9 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   init() {
-    this.get('buildingsController').addObserver('filteredRooms', this, 'parentFilteredRoomsDidChange');
-    /*this.get('buildingsController').addObserver('display', this, 'parentDisplayDidChange');
-    this.set('filteredRooms', this.get('buildingsController').get('filteredRooms'));*/
+    this.get('buildingsController').addObserver('filteredRooms', this, 'filteredRoomsDidChange');
   },
   
   buildingsController: Ember.inject.controller('buildings'),
@@ -15,12 +13,8 @@ export default Ember.Controller.extend({
     return this.get('filteredRooms').get('length');
   }.property(),
 
-  parentFilteredRoomsDidChange(sender, key, value, rev) {
+  filteredRoomsDidChange() {
     this.notifyPropertyChange('packagedRooms');
-  },
-
-  parentDisplayDidChange(sender, key, value, context, rev) {
-    console.log();
   },
 
 

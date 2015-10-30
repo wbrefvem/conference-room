@@ -6,7 +6,7 @@
           <label for="Buildings">
             <span class="icon-office"></span>
             <div class="custom">
-              {{building-select content=model action=(action (mut mySelectedItem)) triggerTransitionToRoute=(action triggerTransitionToRoute)}}
+              {{building-select selectedValue=selectedBuilding content=model action=(action (mut mySelectedItem)) triggerTransitionToRoute=(action triggerTransitionToRoute)}}
             </div>
           </label>
         </li>
