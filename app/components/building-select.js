@@ -15,7 +15,7 @@ export default Ember.Component.extend({
     }
   },
 
-  didInsertElement: function() {
+  didInsertElement() {
     this.set('$element', $(this.get('element')).parent().siblings('span'));
   },
 
@@ -46,6 +46,7 @@ export default Ember.Component.extend({
       }
       toggleColor(this.get('$element').css('color'), this.get('$element'), this);
       changeAction(selectedValue);
+      this.sendAction('triggerTransitionToRoute', selectedValue || null);
     }
   }
 });

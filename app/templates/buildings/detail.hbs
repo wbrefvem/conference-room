@@ -1,0 +1,22 @@
+<h2>{{model.rooms.length}} Rooms Available</h2>
+<h4>{{model.name}}</h4>
+<ul>
+  {{#each filteredRoomsForBuilding as |room|}}
+  <li>
+    <h3>{{room.roomType}} {{room.roomNumber}}</h3>
+    {{#if room.display}}
+      <span class="icon-projector"></span>
+    {{/if}}
+    {{#if room.phone}}
+      <span class="icon-phone"></span>
+    {{/if}}
+    {{#if room.network}}
+      <span class="icon-network"></span>
+    {{/if}}
+    {{room.seating}} <span class="icon-person"></span>
+    {{#if room.hasUsageRestrictions}}
+      <span class="icon-warning"></span> {{room.usageRestrictions}} - contact {{room.manager}}
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>

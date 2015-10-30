@@ -7,32 +7,32 @@ export default Ember.Component.extend({
   inputElementId: null,
   $element: null,
   
-  init: function() {
+  init() {
     this._super.apply(this, arguments);
     
     var elementId = this.elementId;
     this.set('inputElementId', elementId + '-input');
   },
 
-  didInsertElement: function() {
+  didInsertElement() {
     this.set('$element', $($($(this.get('element')).children('label')).children('span')));
   },
 
-  keyPress: function(e) {
+  keyPress(e) {
     if (e.charCode === ENTER_KEY) {
       e.preventDefault();
     }
   },
 
-  keyUp: function() {
+  keyUp() {
     this.toggleColor(this.get('$element'), this);
   },
 
-  change: function() {
+  change() {
     this.toggleColor(this.get('$element'), this);
   },
 
-  toggleColor: function($element, self) {
+  toggleColor($element, self) {
     if (parseInt(self.get('seating'))) {
       $element.css('color', '#fff');
     } else {

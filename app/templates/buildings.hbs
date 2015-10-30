@@ -1,3 +1,49 @@
-<select>
-<option>Here's one</option>
-</select>
+<article>
+  <section class="filters">
+    <form id="searchForm" role="form" action="">
+      <ul>
+        <li>
+          <label for="Buildings">
+            <span class="icon-office"></span>
+            <div class="custom">
+              {{building-select content=model action=(action (mut mySelectedItem)) triggerTransitionToRoute=(action triggerTransitionToRoute)}}
+            </div>
+          </label>
+        </li>
+        <li>
+          {{capacity-input seating=seating name="capacity"}}
+        </li>
+        <li>
+          {{checkbox-input activeColor="#fff" checked=display name="display" label="Display" icon="projector"}}
+        </li>
+        <li>
+          {{checkbox-input activeColor="#fff" checked=phone name="phone" label="Phone" icon="phone"}}
+        </li>
+        <li>
+          {{checkbox-input activeColor="#fff" checked=network name="network" label="Network" icon="network"}}
+        </li>
+        <li class="hidden">
+          <label for="DateTime">
+            <input id="DateTime" type="datetime-local">
+          </label>
+        </li>
+        <li class="hidden">
+          <label for="Search">
+            <input type="submit" id="Search" value="Search" class="button" />
+          </label>
+        </li>
+      </ul>
+    </form> 
+    <div class="feedback">
+      <ul>
+        <li><em>Phase 2 will integrate with outlook to book a room</em></li>
+        <li><a href="mailto:chris.geyer@raleighnc.gov?Subject=Conference Room App Feedback">Send us feedback about this app</a></li>
+        <li><br/></li>
+        <li><a href="mailto:will.refvem@raleighnc.gov?Subject=Conference Room Data Feedback">Tell us about wrong room information</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="results">
+    {{outlet}}
+  </section>
+</article>

@@ -11,7 +11,8 @@ var Room = DS.Model.extend({
     phone: DS.attr('boolean'),
     usageRestrictions: DS.attr('string'),
     network: DS.attr('boolean'),
-    hasUsageRestrictions: DS.attr('boolean')
+    hasUsageRestrictions: DS.attr('boolean'),
+    slug: DS.attr('string')
 });
 
 export default Room;

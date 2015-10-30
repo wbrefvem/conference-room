@@ -23,10 +23,10 @@ module.exports = function(environment) {
 
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
-    'script-src': "'self' http://www.google-analytics.com https://www.google-analytics.com",
+    'script-src': "'self' 'unsafe-inline' http://www.google-analytics.com https://www.google-analytics.com",
     'font-src': "'self' http://fonts.gstatic.com https://fonts.gstatic.com",
     'connect-src': "'self' http://localhost:8008 http://mapststarcsrv3:8008 https://conference-room-api.herokuapp.com",
-    'img-src': "'self'",
+    'img-src': "'self' http://www.google-analytics.com https://www.google-analytics.com",
     'style-src': "'self' http://fonts.googleapis.com https://fonts.googleapis.com",
     'media-src': "'self'",
   };
