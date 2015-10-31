@@ -62,7 +62,6 @@ export default Ember.Controller.extend({
   ),
 
   triggerTransitionToRoute(model) {
-    console.log(model);
     if (!model) {
       this.transitionToRoute('buildings.list', {
         queryParams: {
