@@ -14,9 +14,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('buildings', function() {
-    this.route('detail', { path: ':building_id'});
-    this.route('list', {path: ''});
+  this.route('buildings', { path: '/' }, function() {
+    this.route('detail', { path: ':building_id' });
+    this.route('list', { path: '' });
   });
 });
 
