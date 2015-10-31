@@ -23,14 +23,14 @@ export default Ember.Component.extend({
     change() {
 
       const changeAction = this.get('action');
-      const selectedValueId = this.$('select').val();
+      const selectedValueSlug = this.$('select').val();
       const content = this.get('content');
       const querySet = content.filter(function(item) {
-        return item.id === selectedValueId;
+        return item.get('slug') === selectedValueSlug;
       });
       var selectedValue;
       try {
-        selectedValue = querySet[0].get('id');
+        selectedValue = querySet[0].get('slug');
       } catch (e) {
         selectedValue = null;
       }

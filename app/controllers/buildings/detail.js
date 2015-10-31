@@ -20,10 +20,10 @@ export default Ember.Controller.extend({
 
   filteredRoomsForBuilding: function() {
     var rooms = this.get('buildingsController').get('filteredRooms');
-    var modelId = this.get('model').get('id');
+    var modelSlug = this.get('model').get('slug');
     rooms = rooms.filter(function(item) {
-      var buildingId = item.get('building').get('id');
-      if (buildingId === modelId) {
+      var buildingSlug = item.get('building').get('slug');
+      if (buildingSlug === modelSlug) {
         return true;
       }
     }, this);

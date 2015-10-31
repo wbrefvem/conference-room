@@ -62,6 +62,7 @@ export default Ember.Controller.extend({
   ),
 
   triggerTransitionToRoute(model) {
+    console.log(model);
     if (!model) {
       this.transitionToRoute('buildings.list', {
         queryParams: {
@@ -72,7 +73,7 @@ export default Ember.Controller.extend({
         }
       });
     } else {
-      this.transitionToRoute('buildings.detail', parseInt(model), {
+      this.transitionToRoute('buildings.detail', model, {
         queryParams: {
           seating: this.get('seating'),
           phone: this.get('phone'),

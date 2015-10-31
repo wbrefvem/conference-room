@@ -20,16 +20,17 @@ export default Ember.Controller.extend({
 
   packagedRooms: function() {
     var rooms = this.get('buildingsController').get('filteredRooms');
-    var buildingIds = [];
+    var buildingSlugs = [];
     var buildingArray = [];
 
     rooms.forEach(function(item) {
-      var id = item.get('building').get('id');
-      if (buildingIds.indexOf(id) < 0) {
-        buildingIds.push(id);
+      var slug = item.get('building').get('slug');
+      if (buildingSlugs.indexOf(slug) < 0) {
+        buildingSlugs.push(slug);
         buildingArray.push({ 
           id: item.get('building').get('id'), 
-          name: item.get('building').get('name') 
+          name: item.get('building').get('name'),
+          slug: item.get('building').get('slug')
         });
       }
     });
@@ -47,11 +48,12 @@ export default Ember.Controller.extend({
           var _a = parseInt(a.get('roomNumber'));
           var _b = parseInt(b.get('roomNumber'));
           return _a - _b;
-        })
+        }),
+        slug: item.slug
       };
 
       function roomFilter(room) {
-        if (room.get('building').get('id') === item.id) {
+        if (room.get('building').get('slug') === item.slug) {
           return true;
         } else {
           return false;
