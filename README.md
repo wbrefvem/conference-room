@@ -90,20 +90,20 @@ Specify what it takes to deploy your app.
 
 ### Nginx
 
-> `sudo rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm`
+> `sudo rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm`  
 > `sudo yum install nginx18`
 
 ### PostgreSQL
 
-> `sudo rpm -Uvh http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-redhat94-9.4-1.noarch.rpm`
+> `sudo rpm -Uvh http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-redhat94-9.4-1.noarch.rpm`  
 > `sudo yum install postgresql94 postgresql94-server postgresql94-contrib`
 
 ### Supervisor
 
-> `sudo pip install supervisor`
+> `sudo pip install supervisor`  
 > `sudo wget https://raw.githubusercontent.com/Supervisor/initscripts/master/redhat-init-equeffelec -O /etc/init.d/supervisord`  
 > `sudo echo_supervisord_conf > /etc/supervisord.conf`  
-> `sudo mkdir /etc/supervisor.d`
+> `sudo mkdir /etc/supervisor.d`  
 
 ##### Add the following to /etc/supervisord.conf:
 > `[include]`  
@@ -115,7 +115,7 @@ Specify what it takes to deploy your app.
 > `cd /u01`  
 > `git clone git@github.com:wbrefvem/conference-room-api.git`  
 > `cd conference-room-api`  
-> `virtualenv .venv`
+> `virtualenv .venv`  
 > `sudo cp conference-room-api.ini /etc/supervisor.d/conference-room-api.ini`  
 
 ##### Front-end server
@@ -126,9 +126,9 @@ Specify what it takes to deploy your app.
 
 ### Start servers
 
-> `sudo service postgresql-9.4 start`
-> `sudo service supervisord start`
-> `sudo service nginx restart`
+> `sudo service postgresql-9.4 start`  
+> `sudo service supervisord start`  
+> `sudo service nginx restart`  
 
 ## RHEL 7.x Production Provisioning
 
