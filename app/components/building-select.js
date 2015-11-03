@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   content: null,
   selectedValue: null,
   $element: null,
+  inactiveColor: null,
 
   didInitAttrs() {
     this._super(...arguments);
@@ -17,6 +18,26 @@ export default Ember.Component.extend({
 
   didInsertElement() {
     this.set('$element', $(this.get('element')).parent().siblings('span'));
+    this.set('inactiveColor', this.$element.css('color'));
+    
+    this.$element.parent().on('mouseenter', null, this, function(event) {
+      event.data.mouseEnter();
+    });
+    this.$element.parent().on('mouseleave', null, this, function(event) {
+      event.data.mouseLeave();
+    });
+  },
+
+  mouseEnter: function() {
+    if (!this.selectedValue) {
+      this.$element.css('color', this.get('activeColor'));      
+    }
+  },
+
+  mouseLeave: function() {
+    if (!this.selectedValue) {
+      this.$element.css('color', this.get('inactiveColor'));
+    }
   },
 
   actions: {
