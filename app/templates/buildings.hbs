@@ -6,12 +6,12 @@
           <label for="Buildings">
             <span class="icon-office"></span>
             <div class="custom">
-              {{building-select selectedValue=selectedBuilding content=model action=(action (mut mySelectedItem)) triggerTransitionToRoute=(action triggerTransitionToRoute)}}
+              {{building-select activeColor="#fff" selectedValue=selectedBuilding content=model action=(action (mut mySelectedItem)) triggerTransitionToRoute=(action triggerTransitionToRoute)}}
             </div>
           </label>
         </li>
         <li>
-          {{capacity-input seating=seating name="capacity"}}
+          {{capacity-input activeColor="#fff" seating=seating name="capacity"}}
         </li>
         <li>
           {{checkbox-input activeColor="#fff" checked=display name="display" label="Display" icon="projector"}}

@@ -6,6 +6,8 @@ const ENTER_KEY = 13;
 export default Ember.Component.extend({
   inputElementId: null,
   $element: null,
+  $icon: null,
+  inactiveColor: null,
   
   init() {
     this._super.apply(this, arguments);
@@ -15,7 +17,9 @@ export default Ember.Component.extend({
   },
 
   didInsertElement() {
-    this.set('$element', $($($(this.get('element')).children('label')).children('span')));
+    this.set('$element', $(this.get('element')));
+    this.set('$icon', $(this.get('element')).children('label').children('.icon-person'));
+    this.set('inactiveColor', this.$icon.css('color'));
   },
 
   keyPress(e) {
@@ -30,6 +34,18 @@ export default Ember.Component.extend({
 
   change() {
     this.toggleColor(this.get('$element'), this);
+  },
+
+  mouseEnter: function() {
+    if (this.get('seating') === 0) {
+      this.$icon.css('color', this.get('activeColor'));      
+    }
+  },
+
+  mouseLeave: function() {
+    if (this.get('seating') === 0) {
+      this.$icon.css('color', this.get('inactiveColor'));
+    }
   },
 
   toggleColor($element, self) {
