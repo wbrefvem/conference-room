@@ -10,17 +10,17 @@ export default Ember.Controller.extend({
 
   roomCount: function() {
     return this.get('filteredRoomsForBuilding').get('length');
-  }.property(),
+  }.property('filteredRoomsForBuilding'),
 
 
   filteredRoomsDidChange() {
     this.notifyPropertyChange('filteredRoomsForBuilding');
-    this.notifyPropertyChange('roomCount');
   },
 
   filteredRoomsForBuilding: function() {
     var rooms = this.get('buildingsController').get('filteredRooms');
     var modelSlug = this.get('model').get('slug');
+
     rooms = rooms.filter(function(item) {
       var buildingSlug = item.get('building').get('slug');
       if (buildingSlug === modelSlug) {

@@ -58,7 +58,8 @@ export default Ember.Controller.extend({
     'seating',
     'phone',
     'display',
-    'network'
+    'network',
+    'selectedBuilding'
   ),
 
   triggerTransitionToRoute(model) {
@@ -80,7 +81,6 @@ export default Ember.Controller.extend({
           network: this.get('network')
         }
       });
-      this.notifyPropertyChange('filteredRooms');
     }
   }  
 });
