@@ -17,7 +17,6 @@ export default Ember.Controller.extend({
     this.notifyPropertyChange('packagedRooms');
   },
 
-
   packagedRooms: function() {
     var rooms = this.get('buildingsController').get('filteredRooms');
     var buildingSlugs = [];
@@ -37,7 +36,6 @@ export default Ember.Controller.extend({
 
     var buildings = Ember.ArrayProxy.create({ content: Ember.A(buildingArray) });
     var packaged = Ember.ArrayProxy.create({ content: [] });
-
 
     function buildingIteratorCallback(item) {
 
