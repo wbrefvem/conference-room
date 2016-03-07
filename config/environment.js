@@ -57,7 +57,7 @@ module.exports = function(environment) {
     ENV.googleAnalytics = {
       webPropertyId: 'UA-9880547-9'
     };
-    ENV.APP.API_SERVER_URL = 'http://gisconprdapplv1:8008';
+    ENV.APP.API_SERVER_URL = 'http://rooms.raleighnc.gov:8008';
   }
 
   return ENV;
