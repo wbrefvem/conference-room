@@ -13,8 +13,6 @@ cache:
   directories:
   - ~/conference-room/node_modules
   - ~/conference-room/bower_components
-  - ~/conference-room/dist
-  - ~/conference-room/tmp
 notifications:
   slack:
     secure: di870+2Ue/U5CZud2UOG7k/yByYi5q9G7UOQneJFy+tq4SncXLexJn9yqw9VpgZ6H/8dFEJ/49HgFY0/Ntx+5WaBO3sGNWen+uPBPY2NVmN6Pfsox3lUJRy53jtFjQk9aHBIJVew6Fh6IUoWLP/Dk1MjDQqAVH0KSBL5lQLequY=
